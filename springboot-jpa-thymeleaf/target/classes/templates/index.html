@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/table.css"/><!--/css/table.css-->
+
+
+</head>
+<body>
+<a th:text="'Area:'+${msg}" th:href="@{/regit}">Error</a>
+<span th:text="${regit}"></span>
+<table  class="gridtable" style="text-align: center">
+    <tr>
+        <th>AreaId</th><th>AreaName</th><th>priority</th>
+    </tr>
+    <tr th:each="area,areaState : ${areas}">
+        <td style="border: 1px solid seagreen" th:text="${area.areaId}"></td>
+        <td style="border: 1px solid seagreen" th:text="${area.areaName}"></td>
+        <td style="border: 1px solid seagreen" th:text="${area.priority}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
